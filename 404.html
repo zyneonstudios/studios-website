@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>404: Not found</title>
+        <link rel="icon" type="image/png" href="assets/images/2024.png"/>
+        <link id="shared-css" rel="stylesheet" href="assets/css/shared.css">
+    </head>
+    <body bgcolor="#050713">
+        <script>
+            function getBrowserLanguage() {
+                const browserLanguage = navigator.language || navigator.userLanguage;
+                if(browserLanguage.toLowerCase().startsWith("de")) {
+                    window.location.href = "https://zyneonstudios.com/de/404.html"
+                } else {
+                    window.location.href = "https://zyneonstudios.com/en/404.html"
+                }
+            }
+            window.onload = getBrowserLanguage;
+        </script>
+    </body>
+</html>
