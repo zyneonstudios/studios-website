@@ -48,3 +48,11 @@ function resizeTitlebar() {
 }
 
 window.onresize = onResize;
+
+addEventListener("DOMContentLoaded", (event) => {
+    const url = location.hostname.toLowerCase().replaceAll("www.","");
+    if(url.includes("zyneonstudios.com")||url.includes("zyneonstudios.eu")||url.includes("zyneonstudios.org")||url.includes("zyneonstudios.net")) {
+        const bodyText = document.body.innerHTML;
+        document.body.innerHTML = bodyText.replaceAll('zyneonstudios.de', url);
+    }
+});
